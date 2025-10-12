@@ -63,6 +63,7 @@ If you discover any security related issues, please email support@nylo.dev inste
 * [israelins85](https://github.com/israelins85)
 * [voytech-net](https://github.com/voytech-net)
 * [sadobass](https://github.com/sadobass)
+* [Im-PJ](https://github.com/Im-PJ)
 
 ## Contributing
 
