@@ -40,7 +40,7 @@ class _HomePageState extends NyPage<HomePage> {
         onPressed: () async {
           showToastSuccess(title: "Hello 👋", description: "Welcome to Nylo");
 
-          // Uncomment the code below to send a push notifications
+          // Uncomment the code below to send push notifications
           // await PushNotification.sendNotification(
           //     title: "Hello 👋", body: "Welcome to Nylo",
           // );
