@@ -364,10 +364,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_timezone
-      sha256: "13b2109ad75651faced4831bf262e32559e44aa549426eab8a597610d385d934"
+      sha256: ccad42fbb5d01d51d3eb281cc4428fca556cc4063c52bd9fa40f80cd93b8e649
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.1"
+    version: "5.0.0"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -401,10 +401,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: ebc94ed30fd13cefd397cb1658b593f21571f014b7d1197eeb41fb95f05d899a
+      sha256: "517b20870220c48752eafa0ba1a797a092fb22df0d89535fd9991e86ee2cdd9c"
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.1"
+    version: "6.3.2"
   http:
     dependency: transitive
     description:
@@ -529,18 +529,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: a1d058eb6c33f6b318a6054dcc37f74b444240e67745177bbebce02624bd75c6
+      sha256: "7142a845f6c77152d4713f1c135ee0bf8dcc4f6967135f74da52e9e8707dd2fd"
       url: "https://pub.dev"
     source: hosted
-    version: "6.8.16"
+    version: "6.8.18"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: e08c595e832c1543118ea665d5ee71899214cf91089eddfcfe691c1f2b828d31
+      sha256: e91b09c5d64ce6b65814d274cd78ad2e1ecf833643c8c3e9ec1f642a03b48f62
       url: "https://pub.dev"
     source: hosted
-    version: "6.35.1"
+    version: "6.36.0"
   package_config:
     dependency: transitive
     description:
@@ -958,10 +958,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "66814138c3562338d05613a6e368ed8cfb237ad6d64a9e9334be3f309acfca03"
+      sha256: d7cb55e04cd34096cd3a79b3330245f54cb96a370a1c27adb3c84b917de8b08e
       url: "https://pub.dev"
     source: hosted
-    version: "5.14.0"
+    version: "5.15.0"
   xdg_directories:
     dependency: transitive
     description:
