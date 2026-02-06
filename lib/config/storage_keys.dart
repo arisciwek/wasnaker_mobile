@@ -1,11 +1,12 @@
 import 'package:nylo_framework/nylo_framework.dart';
 
-/* Keys
+/* Storage Keys
 |--------------------------------------------------------------------------
-| Storage keys are used to read and write to local storage.
-| Example: String coins = await StorageKeysConfig.coins.read();
-|
-| Learn more: https://nylo.dev/docs/7.x/storage#storage-keys
+| Application configuration settings.
+| Learn more: https://nylo.dev/docs/7.x/configuration
+| -------------------------------------------------------------------------
+| You can access these config values throughout your app using:
+| `StorageKeysConfig.auth`, `StorageKeysConfig.bearerToken`, etc.
 |-------------------------------------------------------------------------- */
 
 final class StorageKeysConfig {

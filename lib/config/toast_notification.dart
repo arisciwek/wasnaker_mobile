@@ -7,12 +7,13 @@ import 'package:flutter/material.dart';
 import '/resources/widgets/toast_notification_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
-/* Toast Notification Styles
+/* Toast Notification
 |--------------------------------------------------------------------------
-| Default toast notification styles.
-| Manage your toast notification styles here.
-|
-| Learn more: https://nylo.dev/docs/7.x/configuration#toast-notifications
+| Application configuration settings.
+| Learn more: https://nylo.dev/docs/7.x/configuration
+| -------------------------------------------------------------------------
+| You can access these config values throughout your app using:
+| `ToastNotificationConfig.styles`
 |-------------------------------------------------------------------------- */
 
 final class ToastNotificationConfig {

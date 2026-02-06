@@ -5,8 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 /* Design
 |--------------------------------------------------------------------------
-| Contains App Font + Widgets used in the Nylo.
-| Learn more: https://nylo.dev/docs/7.x/themes-and-styling#design
+| Application configuration settings.
+| Learn more: https://nylo.dev/docs/7.x/configuration
+| -------------------------------------------------------------------------
+| You can access these config values throughout your app using:
+| `DesignConfig.appFont`, `DesignConfig.logo`, etc.
 |-------------------------------------------------------------------------- */
 
 final class DesignConfig {

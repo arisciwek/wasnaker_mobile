@@ -16,6 +16,9 @@ final class AppConfig {
   // The version of the application.
   static final String version = getEnv('APP_VERSION', defaultValue: '1.0.0');
 
+  // The URL of the application.
+  static final String appUrl = getEnv('APP_URL', defaultValue: 'http://localhost');
+
   // The current environment of the application.
   static final String environment =
       getEnv('APP_ENV', defaultValue: 'development');
