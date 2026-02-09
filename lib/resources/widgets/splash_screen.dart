@@ -108,11 +108,13 @@ class _AnimatedLoaderState extends State<AnimatedLoader>
           final double angle = (index / 8) * 2 * pi;
           final double offset = widget.size * 0.35;
           return Transform(
-            transform: Matrix4.identity()
-              ..translate(
-                offset * cos(angle),
-                offset * sin(angle),
-              ),
+              transform: Matrix4.identity()
+                ..translateByDouble(
+                  offset * cos(angle),
+                  offset * sin(angle),
+                  0,
+                  1.0,
+                ),
             child: _buildDot(index),
           );
         }),
