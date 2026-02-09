@@ -105,7 +105,7 @@ class _ToastNotificationBase extends StatelessWidget {
             child: Row(
               children: [
                 // Icon section
-                Container(
+                SizedBox(
                   width: 50,
                   child: Center(child: _toastMeta.icon),
                 ),
