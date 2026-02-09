@@ -21,7 +21,7 @@ final class AppConfig {
 
   // The current environment of the application.
   static final String environment =
-      getEnv('APP_ENV', defaultValue: 'development');
+      getEnv('APP_ENV', defaultValue: 'developing');
 
   // The base URL for the application's API.
   static final String apiBaseUrl = getEnv('API_BASE_URL', defaultValue: 'https://api.myflutterapp.com');
