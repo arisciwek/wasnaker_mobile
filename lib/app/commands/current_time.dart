@@ -1,7 +1,7 @@
 import 'package:intl/intl.dart';
 import 'package:nylo_framework/metro/ny_cli.dart';
 
-void main(arguments) => _CurrentTimeCommand(arguments).run();
+void main(List<String> arguments) => _CurrentTimeCommand(arguments).run();
 
 /// Current Time Command
 ///
@@ -26,6 +26,6 @@ class _CurrentTimeCommand extends NyCustomCommand {
 
     // Format the current time
     final formattedTime = dateFormat.format(now);
-    info("The current time is " + formattedTime);
+    info("The current time is $formattedTime");
   }
 }

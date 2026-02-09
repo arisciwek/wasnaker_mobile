@@ -24,10 +24,10 @@ final class AppConfig {
       getEnv('APP_ENV', defaultValue: 'development');
 
   // The base URL for the application's API.
-  static final String apiBaseUrl = "https://api.myflutterapp.com";
+  static final String apiBaseUrl = getEnv('API_BASE_URL', defaultValue: 'https://api.myflutterapp.com');
 
   // The path to the assets directory.
-  static final String assetPath = getEnv('ASSET_PATH', defaultValue: 'public');
+  static final String assetPath = getEnv('ASSET_PATH', defaultValue: 'assets');
 
   // Whether to show the splash screen on app startup.
   static final bool showSplashScreen = getEnv('SHOW_SPLASH_SCREEN', defaultValue: true);
