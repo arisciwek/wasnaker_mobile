@@ -38,7 +38,7 @@ class Boot {
 | It's run before your app providers are booted.
 |-------------------------------------------------------------------------- */
 
-_init() async {
+Future<void> _init() async {
   /// Example: Initializing StorageConfig
   // StorageConfig.init(
   //   androidOptions: AndroidOptions(

@@ -2,23 +2,23 @@ import 'package:nylo_framework/nylo_framework.dart';
 import 'controller.dart';
 
 class HomeController extends Controller {
-  onTapDocumentation() async {
+  Future<void> onTapDocumentation() async {
     await openUrl("https://nylo.dev/docs");
   }
 
-  onTapGithub() async {
+  Future<void> onTapGithub() async {
     await openUrl("https://github.com/nylo-core/nylo");
   }
 
-  onTapChangeLog() async {
+  Future<void> onTapChangeLog() async {
     await openUrl("https://github.com/nylo-core/nylo/releases");
   }
 
-  onTapYouTube() async {
+  Future<void> onTapYouTube() async {
     await openUrl("https://m.youtube.com/@nylo_dev");
   }
 
-  onTapX() async {
+  Future<void> onTapX() async {
     await openUrl("https://x.com/nylo_dev");
   }
 }
