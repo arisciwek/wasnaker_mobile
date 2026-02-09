@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '/config/localization.dart';
 import '/resources/widgets/loader_widget.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
@@ -74,7 +75,7 @@ class _MainState extends NyPage<Main> {
           (Locale? locale, Iterable<Locale> supportedLocales) {
         return locale;
       },
-      supportedLocales: [Locale('en', 'US')],
+      supportedLocales: LocalizationConfig.supportedLocales,
     );
   }
 }
