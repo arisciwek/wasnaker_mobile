@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: app_badge_plus
-      sha256: "81130fe6150ce2a1f12af4bb7d6f646496d284d5f87f2c121af8258a453bbb3f"
+      sha256: dab607342bbf73b33a532e384117ccb13efbaabadb6058c40fd74d743b0ef1ab
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.8"
+    version: "1.2.9"
   archive:
     dependency: transitive
     description:
@@ -213,10 +213,10 @@ packages:
     dependency: transitive
     description:
       name: error_stack
-      sha256: "0974c7b4b13d99523718959eaf9f8e425f014ef8b4883aef0123cf91f1c95ec1"
+      sha256: "05efc3fdeb089c375a8dd148e40fed427d6464946a4b9c71d8fcec15259a0ca7"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.1"
+    version: "2.1.1"
   fake_async:
     dependency: transitive
     description:
@@ -417,10 +417,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: db9df7a5898d894eeda4c78143f35c30a243558be439518972366880b80bf88e
+      sha256: "4e9391085e524954a51e3625b7c9c7e9851dc3f376603208bb45c24b9a66255d"
       url: "https://pub.dev"
     source: hosted
-    version: "8.0.2"
+    version: "8.1.0"
   hooks:
     dependency: transitive
     description:
@@ -577,18 +577,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "5dfb1717493da7ebed060e5f56b1db376040537001dc9bc27c416cddc28c6cdc"
+      sha256: "7b30c276e65f9424589fe4092ca5b91ae724effe65ea97e5bd4127faf3107313"
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.8"
+    version: "7.1.10"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: de71cf5ef81c3943dca90dc275ce230d1884b8aa5ebfb2b655adb45d829e9954
+      sha256: "267327062fda451edee0520bea0835b8197bbae265b6605829c3b404f78ac659"
       url: "https://pub.dev"
     source: hosted
-    version: "7.19.0"
+    version: "7.20.2"
   objective_c:
     dependency: transitive
     description:
