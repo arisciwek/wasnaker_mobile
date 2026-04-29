@@ -577,18 +577,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "7b30c276e65f9424589fe4092ca5b91ae724effe65ea97e5bd4127faf3107313"
+      sha256: "3a0de717f68d89926d2223ca8b062fefe18835b5de01f7b843859e1f5c486737"
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.10"
+    version: "7.1.12"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "267327062fda451edee0520bea0835b8197bbae265b6605829c3b404f78ac659"
+      sha256: "0ee795cb189c3e43782b303e2c574e50a51b212b983d46e4304443afdb53cbd1"
       url: "https://pub.dev"
     source: hosted
-    version: "7.20.2"
+    version: "7.22.0"
   objective_c:
     dependency: transitive
     description:
