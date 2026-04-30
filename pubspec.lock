@@ -425,10 +425,10 @@ packages:
     dependency: transitive
     description:
       name: hooks
-      sha256: e79ed1e8e1929bc6ecb6ec85f0cb519c887aa5b423705ded0d0f2d9226def388
+      sha256: "025f060e86d2d4c3c47b56e33caf7f93bf9283340f26d23424ebcfccf34f621e"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   http:
     dependency: transitive
     description:
@@ -577,18 +577,18 @@ packages:
     dependency: "direct main"
     description:
       name: nylo_framework
-      sha256: "3a0de717f68d89926d2223ca8b062fefe18835b5de01f7b843859e1f5c486737"
+      sha256: "25a67016547a7b5ed9a03d0700fffb7528f168b89f10a465ac68f80250adc2da"
       url: "https://pub.dev"
     source: hosted
-    version: "7.1.12"
+    version: "7.1.13"
   nylo_support:
     dependency: transitive
     description:
       name: nylo_support
-      sha256: "0ee795cb189c3e43782b303e2c574e50a51b212b983d46e4304443afdb53cbd1"
+      sha256: a8e15032b35cce43f1d3aae3232e0fbb4975de4a1772d3064aa30fd0072f01bc
       url: "https://pub.dev"
     source: hosted
-    version: "7.22.0"
+    version: "7.23.0"
   objective_c:
     dependency: transitive
     description:
@@ -741,6 +741,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.0"
+  record_use:
+    dependency: transitive
+    description:
+      name: record_use
+      sha256: "2551bd8eecfe95d14ae75f6021ad0248be5c27f138c2ec12fcb52b500b3ba1ed"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.6.0"
   rxdart:
     dependency: transitive
     description:
@@ -982,10 +990,10 @@ packages:
     dependency: transitive
     description:
       name: vm_service
-      sha256: "45caa6c5917fa127b5dbcfbd1fa60b14e583afdc08bfc96dda38886ca252eb60"
+      sha256: "0016aef94fc66495ac78af5859181e3f3bf2026bd8eecc72b9565601e19ab360"
       url: "https://pub.dev"
     source: hosted
-    version: "15.0.2"
+    version: "15.2.0"
   watcher:
     dependency: transitive
     description:
