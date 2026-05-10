@@ -92,8 +92,8 @@ class _HomePageState extends NyPage<HomePage> {
             description: "Welcome to Nylo",
           );
 
-          // Uncomment the code below to send a push notifications
-          // await PushNotification.sendNotification(
+          // Uncomment the code below to send a local notifications
+          // await LocalNotification.sendNotification(
           //   title: "Hello 👋",
           //   body: "Welcome to Nylo",
           // );
