@@ -4,8 +4,8 @@
 # Official repository: https://github.com/nylo-core/nylo
 # Author: Anthony Gordon <https://github.com/agordn52>
 
-name: flutter_app
-description: A new Nylo Flutter application.
+name: wasnaker_surveyor
+description: Wasnaker Surveyor — built on Nylo + flutter_modular.
 
 publish_to: 'none'
 
@@ -19,6 +19,7 @@ dependencies:
   analyzer: ^10.0.1
   intl: ^0.20.2
   nylo_framework: ^7.1.17
+  flutter_modular: ^6.4.1
   cupertino_icons: ^1.0.9
   font_awesome_flutter: ^11.0.0
   flutter:
