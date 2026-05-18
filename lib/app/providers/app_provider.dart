@@ -57,17 +57,20 @@ class AppProvider implements NyProvider {
       builder: () => _StatCard(label: 'Billing Bulan Ini', value: 'Rp 4.2M', icon: Icons.receipt_long),
     ));
 
-    // Navigasi — surveyor
+    // Navigasi — surveyor (filtered by Perfex capabilities)
     DashboardRegistry.registerNav(DashboardNavItem(
       label: 'Inspections', clientType: 'surveyor', order: 1,
+      requiredCapability: 'inspections:view',
       icon: const Icon(Icons.search), onTap: () {},
     ));
     DashboardRegistry.registerNav(DashboardNavItem(
       label: 'Orders', clientType: 'surveyor', order: 2,
+      requiredCapability: 'orders:view',
       icon: const Icon(Icons.shopping_bag_outlined), onTap: () {},
     ));
     DashboardRegistry.registerNav(DashboardNavItem(
       label: 'Equipment', clientType: 'surveyor', order: 3,
+      requiredCapability: 'equipment:view',
       icon: const Icon(Icons.construction), onTap: () {},
     ));
     DashboardRegistry.registerNav(DashboardNavItem(
