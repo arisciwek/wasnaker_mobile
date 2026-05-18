@@ -26,6 +26,12 @@ class _LoginPageState extends NyPage<LoginPage> {
     super.dispose();
   }
 
+  Color _iconColor(BuildContext context) => NyColor.resolveColor(
+        context,
+        light: Colors.grey.shade600,
+        dark: Colors.grey.shade400,
+      )!;
+
   Future<void> _onLogin() async {
     final email    = _emailController.text.trim();
     final password = _passwordController.text;
@@ -105,11 +111,24 @@ class _LoginPageState extends NyPage<LoginPage> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Colors.red.shade50,
-                    border: Border.all(color: Colors.red.shade200),
+                    color: NyColor.resolveColor(context,
+                        light: Colors.red.shade50,
+                        dark: const Color(0xFF3D1515)),
+                    border: Border.all(
+                      color: NyColor.resolveColor(context,
+                          light: Colors.red.shade200,
+                          dark: Colors.red.shade900)!,
+                    ),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Text(_errorMessage!, style: TextStyle(color: Colors.red.shade700)),
+                  child: Text(
+                    _errorMessage!,
+                    style: TextStyle(
+                      color: NyColor.resolveColor(context,
+                          light: Colors.red.shade700,
+                          dark: Colors.red.shade300),
+                    ),
+                  ),
                 ),
                 const SizedBox(height: 16),
               ],
@@ -119,9 +138,10 @@ class _LoginPageState extends NyPage<LoginPage> {
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
+                style: TextStyle(color: context.color.general.content),
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  prefixIcon: const Icon(Icons.email_outlined),
+                  prefixIcon: Icon(Icons.email_outlined, color: _iconColor(context)),
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                 ),
               ),
@@ -133,11 +153,15 @@ class _LoginPageState extends NyPage<LoginPage> {
                 obscureText: _obscurePassword,
                 textInputAction: TextInputAction.done,
                 onSubmitted: (_) => _onLogin(),
+                style: TextStyle(color: context.color.general.content),
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  prefixIcon: const Icon(Icons.lock_outlined),
+                  prefixIcon: Icon(Icons.lock_outlined, color: _iconColor(context)),
                   suffixIcon: IconButton(
-                    icon: Icon(_obscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined),
+                    icon: Icon(
+                      _obscurePassword ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                      color: _iconColor(context),
+                    ),
                     onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
                   ),
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
