@@ -1,5 +1,5 @@
 import '/config/app.dart';
-import '/app/networking/api_service.dart';
+import '/resources/pages/login_page.dart';
 import '/resources/widgets/theme_toggle_widget.dart';
 import '/bootstrap/extensions.dart';
 import '/resources/widgets/logo_widget.dart';
@@ -35,6 +35,12 @@ class _HomePageState extends NyPage<HomePage> {
   /// Links list
   List<Map<String, dynamic>> _links() {
     return [
+      {
+        "title": "Sign In",
+        "subtitle": "Login to your account",
+        "icon": FontAwesomeIcons.rightToBracket,
+        "onTap": () => routeTo(LoginPage.path),
+      },
       if (Nylo.containsRoute("/landing"))
         {
           "title": "Start building",
