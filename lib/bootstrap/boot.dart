@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import '/app/modules/app_module.dart';
 import '/config/app.dart';
 import '/resources/widgets/splash_screen.dart';
 import '../resources/widgets/main_widget.dart';
@@ -25,7 +27,10 @@ class Boot {
         boot: (Nylo nylo) async {
           await bootFinished(nylo, providers);
 
-          runApp(Main(nylo));
+          runApp(ModularApp(
+            module: AppModule(),
+            child: Main(nylo),
+          ));
         },
       );
 }
