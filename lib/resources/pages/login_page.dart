@@ -20,6 +20,9 @@ class _LoginPageState extends NyPage<LoginPage> {
   get init => () {};
 
   @override
+  LoadingStyle get loadingStyle => LoadingStyle.none();
+
+  @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();

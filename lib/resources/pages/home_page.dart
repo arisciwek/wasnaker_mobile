@@ -34,13 +34,34 @@ class _HomePageState extends NyPage<HomePage> {
 
   /// Links list
   List<Map<String, dynamic>> _links() {
+    final authData = Auth.data();
+    final isLoggedIn = authData != null;
+
     return [
-      {
-        "title": "Sign In",
-        "subtitle": "Login to your account",
-        "icon": FontAwesomeIcons.rightToBracket,
-        "onTap": () => routeTo(LoginPage.path),
-      },
+      if (!isLoggedIn)
+        {
+          "title": "Sign In",
+          "subtitle": "Login to your account",
+          "icon": FontAwesomeIcons.rightToBracket,
+          "onTap": () => routeTo(LoginPage.path),
+        },
+      if (isLoggedIn)
+        {
+          "title": "${authData['staff']['firstname']} ${authData['staff']['lastname']}",
+          "subtitle": authData['staff']['company_name'] ?? authData['staff']['role'] ?? '',
+          "icon": FontAwesomeIcons.circleUser,
+          "onTap": () {},
+        },
+      if (isLoggedIn)
+        {
+          "title": "Sign Out",
+          "subtitle": "Logout from your account",
+          "icon": FontAwesomeIcons.rightFromBracket,
+          "onTap": () async {
+            await Auth.logout();
+            setState(() {});
+          },
+        },
       if (Nylo.containsRoute("/landing"))
         {
           "title": "Start building",
