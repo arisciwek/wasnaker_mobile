@@ -1,5 +1,6 @@
 import '/config/app.dart';
 import '/resources/pages/login_page.dart';
+import 'package:wasnaker_core/wasnaker_core.dart';
 import '/resources/widgets/theme_toggle_widget.dart';
 import '/bootstrap/extensions.dart';
 import '/resources/widgets/logo_widget.dart';
@@ -51,6 +52,13 @@ class _HomePageState extends NyPage<HomePage> {
           "subtitle": authData['staff']['company_name'] ?? authData['staff']['role'] ?? '',
           "icon": FontAwesomeIcons.circleUser,
           "onTap": () {},
+        },
+      if (isLoggedIn)
+        {
+          "title": "Dashboard",
+          "subtitle": "Statistik & Navigasi",
+          "icon": FontAwesomeIcons.gaugeHigh,
+          "onTap": () => routeTo(DashboardPage.path),
         },
       if (isLoggedIn)
         {

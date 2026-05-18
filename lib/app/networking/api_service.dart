@@ -13,7 +13,6 @@ class ApiService extends WasnakerApiService {
               ..headers.addAll({
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'X-Api-Key': getEnv('API_KEY', defaultValue: ''),
               });
           },
         );
@@ -24,12 +23,12 @@ class ApiService extends WasnakerApiService {
         BearerAuthInterceptor: BearerAuthInterceptor(),
       };
 
-  // ── Auth endpoints ────────────────────────────────────────────────────────
+  // ── Auth — apps module ────────────────────────────────────────────────────
 
   Future<dynamic> login(String email, String password) async {
     return await network(
       request: (request) => request.post(
-        '/surveyors/auth/login',
+        '/auth/login',
         data: {'email': email, 'password': password},
       ),
     );
@@ -37,13 +36,16 @@ class ApiService extends WasnakerApiService {
 
   Future<dynamic> me() async {
     return await network(
-      request: (request) => request.get('/surveyors/auth/me'),
+      request: (request) => request.get('/auth/me'),
     );
   }
 
-  Future<dynamic> logout() async {
+  Future<dynamic> refresh(String refreshToken) async {
     return await network(
-      request: (request) => request.post('/surveyors/auth/logout'),
+      request: (request) => request.post(
+        '/auth/refresh',
+        data: {'refresh_token': refreshToken},
+      ),
     );
   }
 }
