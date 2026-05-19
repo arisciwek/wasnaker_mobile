@@ -45,40 +45,41 @@ class AppProvider implements NyProvider {
   }
 
   void _registerDashboard() {
-    // Statistik — surveyor
+    // Statistik — placeholder, real data via module API
     DashboardRegistry.registerStat(DashboardStatWidget(
-      clientType: 'surveyor', order: 1,
+      order: 1,
       builder: () => _StatCard(label: 'Jadwal Minggu Ini', value: '5', icon: Icons.calendar_today),
     ));
     DashboardRegistry.registerStat(DashboardStatWidget(
-      clientType: 'surveyor', order: 2,
+      order: 2,
       builder: () => _StatCard(label: 'RFQ Masuk', value: '12', icon: Icons.inbox),
     ));
     DashboardRegistry.registerStat(DashboardStatWidget(
-      clientType: 'surveyor', order: 3,
+      order: 3,
       builder: () => _StatCard(label: 'Billing Bulan Ini', value: 'Rp 4.2M', icon: Icons.receipt_long),
     ));
 
-    // Navigasi — surveyor (filtered by Perfex capabilities)
-    DashboardRegistry.registerNav(DashboardNavItem(
-      label: 'Inspections', clientType: 'surveyor', order: 1,
-      requiredCapability: 'inspections:view',
-      icon: const Icon(Icons.search), onTap: () {},
-    ));
-    DashboardRegistry.registerNav(DashboardNavItem(
-      label: 'Orders', clientType: 'surveyor', order: 2,
-      requiredCapability: 'orders:view',
-      icon: const Icon(Icons.shopping_bag_outlined), onTap: () {},
-    ));
-    DashboardRegistry.registerNav(DashboardNavItem(
-      label: 'Equipment', clientType: 'surveyor', order: 3,
-      requiredCapability: 'equipment:view',
-      icon: const Icon(Icons.construction), onTap: () {},
-    ));
-    DashboardRegistry.registerNav(DashboardNavItem(
-      label: 'RFQs', clientType: 'surveyor', order: 4,
-      icon: const Icon(Icons.request_quote_outlined), onTap: () {},
-    ));
+    // Navigasi — read from Perfex menu_items (no hardcode, no rebuild on change)
+    _registerNavFromPerfex();
+  }
+
+  void _registerNavFromPerfex() {
+    final items = Auth.data()?['staff']?['menu_items'] as List?;
+    if (items == null) return;
+
+    for (final item in items) {
+      final feature = item['feature'] as String? ?? '';
+      final label   = item['label']   as String? ?? feature;
+      final icon    = item['icon']    as String? ?? 'fa-solid fa-circle';
+      final order   = (item['order']  as num?)?.toInt() ?? 99;
+
+      DashboardRegistry.registerNav(DashboardNavItem(
+        label: label,
+        order: order,
+        iconBuilder: () => FaIconMapper.fromClass(icon),
+        onTap: () {},
+      ));
+    }
   }
 }
 
